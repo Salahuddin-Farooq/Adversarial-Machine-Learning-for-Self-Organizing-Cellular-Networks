@@ -5,3 +5,12 @@ Deep Neural Networks (DNN) have been widely adopted in self-organizing networks 
 
 # Code
 Code contains implementation of FGSM attack at dataset of LTE network using CleverHans library. 
+
+# Dataset
+The dataset is extracted from live LTE network. Each row contains an hourly record of a specific eNodeB with a sudden increase in E-RAB Drop Rate is labeled as an anomaly. Initial experiments involve total 4464 records of two LTE eNodeBs. 3940 records are labeled as normal and 524 as anomalies based on domain knowledge. 
+
+# Data Preprocessing 
+This dataset has binary and nominal data variables and I have applied one-hot encoding to convert nominal features to numeric features since DNNs cannot operate on nominal data directly. This resulted in the transformation of the 25-feature dataset into a 26-feature dataset after one-hot encoding. After analyzing the data, we have noticed varying distributions of each feature. For example, the mean and standard distribution of some features are larger by seven orders of magnitude from some other features. Without performing normalization, these features would dominate other features. To mitigate this effect, we have used min-max scaling using Scikit-learn library to normalize data.
+
+# DNN Architecture 
+For our use case of anomaly detection in the dataset of E-RAB Drop Rate, we have used Multilayer Perceptron (MLP) classifier with the activation function of ReLU using Keras and Tensorflow sequential model. The MLP model is composed of three hidden layers of 256 neural units. The output layer contains two neurons since labels have two normal and abnormal classes. For regularization, dropout with a rate of 0.4 and early-stopping is used.
