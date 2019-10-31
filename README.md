@@ -14,3 +14,6 @@ This dataset has binary and nominal data variables and I have applied one-hot en
 
 # DNN Architecture 
 For our use case of anomaly detection in the dataset of E-RAB Drop Rate, we have used Multilayer Perceptron (MLP) classifier with the activation function of ReLU using Keras and Tensorflow sequential model. The MLP model is composed of three hidden layers of 256 neural units. The output layer contains two neurons since labels have two normal and abnormal classes. For regularization, dropout with a rate of 0.4 and early-stopping is used.
+
+# Conclusions
+In this paper, I have performed FGSM and JSMA attack on DNN-based abnormal KPI detector. Our results indicate more than 60% drop in the performance of DNN-based abnormal KPI detector making it very evident that DNN used for detection does not provide robustness against adversarial perturbation. 
