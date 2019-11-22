@@ -20,3 +20,4 @@ In this paper, I have performed FGSM and JSMA attack on DNN-based abnormal KPI d
 
  # Results 
  ![Image description](https://github.com/Salahuddin-Farooq/Adversarial-ML-for-Self-Organizing-Cellular-Networks/blob/master/FGSM.png)
+ ![Image description](https://github.com/Salahuddin-Farooq/Adversarial-ML-for-Self-Organizing-Cellular-Networks/blob/master/JSMA1.png)
