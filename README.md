@@ -17,3 +17,6 @@ For our use case of anomaly detection in the dataset of E-RAB Drop Rate, we have
 
 # Conclusions
 In this paper, I have performed FGSM and JSMA attack on DNN-based abnormal KPI detector. Our results indicate more than 60% drop in the performance of DNN-based abnormal KPI detector making it very evident that DNN used for detection does not provide robustness against adversarial perturbation. 
+
+ # Results 
+ ![Image description](F:\Github\FGSM.png)
