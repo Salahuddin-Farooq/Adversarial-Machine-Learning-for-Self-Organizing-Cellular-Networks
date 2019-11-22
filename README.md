@@ -9,7 +9,7 @@ Code contains implementation of FGSM attack at dataset of LTE network using Clev
 # Dataset
 The dataset is extracted from live LTE network. Each row contains an hourly record of a specific eNodeB with a sudden increase in E-RAB Drop Rate is labeled as an anomaly. Initial experiments involve total 4464 records of two LTE eNodeBs. 3940 records are labeled as normal and 524 as anomalies based on domain knowledge. 
 
-# Data Preprocessing 
+# Data Preprocessing and EDA 
 This dataset has binary and nominal data variables and I have applied one-hot encoding to convert nominal features to numeric features since DNNs cannot operate on nominal data directly. This resulted in the transformation of the 25-feature dataset into a 26-feature dataset after one-hot encoding. After analyzing the data, I have noticed varying distributions of each feature. For example, the mean and standard distribution of some features are larger by seven orders of magnitude from some other features. Without performing normalization, these features would dominate other features. To mitigate this effect, we have used min-max scaling using Scikit-learn library to normalize data.
 
 # DNN Architecture 
